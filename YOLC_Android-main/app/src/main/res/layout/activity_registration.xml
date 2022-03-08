@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity">
+
+            <TextView
+                android:id="@+id/txt_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="아이디 "
+                android:ems="23"
+                android:fontFamily="@font/bold"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/edit_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="18"
+                android:hint="아이디 "
+                android:fontFamily="@font/bold"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_id"/>
+
+            <TextView
+                android:id="@+id/txt_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:ems="23"
+                android:text="비밀번호 "
+                android:fontFamily="@font/bold"
+                app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_id" />
+
+            <EditText
+                android:id="@+id/edit_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="18"
+                android:hint="특수문자 포함 8자 이상 "
+                android:inputType="textPassword"
+                android:fontFamily="@font/bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_pw" />
+
+            <TextView
+                android:id="@+id/txt_pw_re"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="23"
+                android:text="비밀번호 확인 "
+                android:fontFamily="@font/bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintTop_toBottomOf="@+id/edit_pw" />
+
+            <EditText
+                android:id="@+id/edit_pw_re"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="18"
+                android:hint="비밀번호를 한번 더 입력해주세요 "
+                android:inputType="textPassword"
+                android:fontFamily="@font/bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_pw_re" />
+
+            <Button
+                android:id="@+id/QR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="QR 코드 스캔"
+                android:fontFamily="@font/bold"
+                app:layout_constraintTop_toBottomOf="@+id/edit_pw_re"
+                app:layout_constraintStart_toStartOf="@+id/edit_pw_re" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="이름"
+                android:textSize="20dp"
+                android:fontFamily="@font/bold"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/QR"
+                app:layout_constraintTop_toBottomOf="@+id/QR" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="주소"
+                android:inputType="number"
+                android:textSize="20dp"
+                android:fontFamily="@font/bold"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name"/>
+
+            <EditText
+                android:id="@+id/textPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="13"
+                android:inputType="number"
+                android:text="휴대폰 번호"
+                android:textSize="20dp"
+                android:fontFamily="@font/bold"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/address"
+                app:layout_constraintTop_toBottomOf="@+id/address"/>
+
+            <Button
+                android:id="@+id/sendSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인증번호 전송"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/bold"
+                app:layout_constraintStart_toStartOf="@+id/textPhone"
+                app:layout_constraintTop_toBottomOf="@+id/smsAuth"/>
+
+            <EditText
+                android:id="@+id/smsAuth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                android:hint="인증번호를 입력해주세요."
+                android:ems="18"
+                android:fontFamily="@font/bold"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPhone" />
+
+            <Button
+                android:id="@+id/phoneAuth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:text="휴대폰 인증"
+                android:fontFamily="@font/bold"
+                app:layout_constraintStart_toEndOf="@+id/sendSms"
+                app:layout_constraintTop_toBottomOf="@+id/smsAuth" />
+
+
+            <Button
+                android:id="@+id/btn_register2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="회원가입 "
+                android:fontFamily="@font/bold"
+                app:layout_constraintStart_toStartOf="@+id/sendSms"
+                app:layout_constraintTop_toBottomOf="@+id/sendSms" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
